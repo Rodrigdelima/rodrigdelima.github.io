@@ -1,114 +1,187 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <title>Rodrigo Lima | Data Analytics & BI</title>
 
 <style>
-
-body{
-font-family: Arial;
-margin:0;
-background-image:url('fundo.jpg');
-background-size:cover;
-background-position:center;
-color:white;
+/* Reset básico para remover margens padrão */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* COR DA PÁGINA: Esta cor escura aparece abaixo do banner */
+    background-color: #1e1e2f;
+    color: white;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:40px;
+/* O banner superior */
+.header-banner {
+    /* Use a sua imagem de fundo aqui */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px; /* Altura fixa para o banner */
+    width: 100%;
+    position: relative; /* Para posicionar o conteúdo interno */
+    margin-bottom: 20px; /* Espaço para os cartões abaixo */
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
 }
 
-.header{
-text-align:center;
-margin-bottom:40px;
+/* Container interno do banner para alinhar o perfil à esquerda */
+.banner-container {
+    max-width: 900px;
+    margin: 0 auto; /* Centralizado horizontalmente */
+    height: 100%;
+    display: flex; /* Usar flexbox para layout interno */
+    align-items: center; /* Centralizar verticalmente dentro do banner */
+    justify-content: flex-start; /* Alinhar à esquerda */
+    padding: 20px; /* Espaçamento interno */
 }
 
-.profile{
-width:150px;
-height:150px;
-border-radius:50%;
-border:4px solid white;
-object-fit:cover;
-margin-bottom:20px;
+/* Grupo de perfil (foto e texto) */
+.profile-group {
+    display: flex;
+    align-items: center; /* Centralizar verticalmente a foto e o texto */
 }
 
-h1{
-margin:10px 0;
+.profile {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    margin-right: 30px; /* Espaço entre a foto e o texto */
+    margin-top: 0;
 }
 
-h2{
-color:#60a5fa;
+/* O nome e título estarão em um grupo de texto */
+.header-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
-.card{
-background:rgba(0,0,0,0.65);
-padding:25px;
-margin-bottom:25px;
-border-radius:12px;
-box-shadow:0px 4px 15px rgba(0,0,0,0.4);
+h1 {
+    margin: 0;
+    font-size: 3em; /* Texto grande e branco */
 }
 
-a{
-color:#60a5fa;
-text-decoration:none;
+.header-text p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #f0f0f0; /* Um branco levemente acinzentado */
 }
 
+/* Container de cards */
+.container {
+    max-width: 900px;
+    margin: auto; /* Centralizado, sem margem superior/inferior adicional */
+    padding: 20px; /* Espaçamento para os cartões */
+}
+
+h2 {
+    color: #60a5fa;
+    margin-top: 0;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.6);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item {
+    margin-bottom: 15px;
+}
+
+.card-item:last-child {
+    margin-bottom: 0;
+}
+
+.icon {
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 </style>
 
 </head>
 
 <body>
 
-<div class="container">
+    <div class="header-banner">
+        <div class="banner-container">
+            <div class="profile-group">
+                <img src="foto-perfil.jpg" alt="Foto de Rodrigo Lima" class="profile">
+                <div class="header-text">
+                    <h1>Rodrigo Lima</h1>
+                    <p>Data Analyst | SQL | Power BI | Supply Chain Analytics</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="header">
+    <div class="container">
 
-<img src="foto perfil.jpg" class="profile">
+        <div class="card">
+            <h2>Sobre mim</h2>
+            <p>
+            Analista de dados focado em análise de performance, KPIs operacionais
+            e inteligência de negócios. Experiência com SQL, Excel e Power BI
+            para transformar dados em decisões estratégicas.
+            </p>
+        </div>
 
-<h1>Rodrigo Lima</h1>
+        <div class="card">
+            <h2>Projetos</h2>
+            
+            <div class="card-content">
+                <div class="card-item">
+                    <span class="icon">📊</span>
+                    <span>Análise de vendas com SQL</span>
+                    <br>
+                    <small>GitHub: <a href="https://github.com/Rodrigdelima/Analise-vendas-SQL-BI" target="_blank">Acessar repositório</a></small>
+                </div>
+                
+                <div class="card-item">
+                    <span class="icon">📦</span>
+                    <span>Dashboard logístico de Supply Chain</span>
+                </div>
+                
+                <div class="card-item">
+                    <span class="icon">📈</span>
+                    <span>Análise de performance comercial</span>
+                    <br>
+                    <small>GitHub: <a href="https://github.com/Rodrigdelima/olist-data-warehouse-bi-analytics" target="_blank">Acessar repositório</a></small>
+                </div>
+            </div>
 
-<p>Data Analyst | SQL | Power BI | Supply Chain Analytics</p>
+        </div>
 
-</div>
+        <div class="card">
+            <h2>Contato</h2>
+            <div class="card-content">
+                <p>GitHub: <a href="https://github.com/Rodrigdelima" target="_blank">github.com/Rodrigdelima</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/rodrigo-limaa/" target="_blank">linkedin.com/in/rodrigo-limaa</a></p>
+            </div>
+        </div>
 
-<div class="card">
-
-<h2>Sobre mim</h2>
-
-<p>
-Analista de dados focado em análise de performance, KPIs operacionais
-e inteligência de negócios. Experiência com SQL, Excel e Power BI
-para transformar dados em decisões estratégicas.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Projetos</h2>
-
-<p>📊 Análise de vendas com SQL</p>
-  <p>GitHub: <a https://github.com/Rodrigdelima/Analise-vendas-SQL-BI</a></p>
-<p>📦 Dashboard logístico de Supply Chain</p>
-<p>📈 Análise de performance comercial</p>
- <p>GitHub: <a https://github.com/Rodrigdelima/olist-data-warehouse-bi-analytics</a></p>
-
-</div>
-
-<div class="card">
-
-<h2>Contato</h2>
-
-<p>GitHub: <a href="https://github.com/Rodrigdelima">github.com/Rodrigdelima</a></p>
-
-<p>LinkedIn: <a href="https://www.linkedin.com/in/rodrigo-limaa/">github.com/Rodrigdelima</a></p>
-</div>
-
-</div>
+    </div>
 
 </body>
-
 </html>
